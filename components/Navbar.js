@@ -6,9 +6,15 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <a href="/" className="logo">
-        it's <span className="underline">me</span>
-      </a>
+      <div className="navbar-left">
+        <a href="/" className="logo">
+          it's <span className="underline">me</span>
+        </a>
+        <span className="availability-badge">
+          <span className="pulse-dot"></span>
+          Open to work
+        </span>
+      </div>
 
       <button
         className="mobile-menu-btn"
