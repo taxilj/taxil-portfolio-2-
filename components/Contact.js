@@ -16,13 +16,13 @@ export default function Contact() {
   // Fixed list — NEVER modify this array
   const services = [
     "AI Chatbot Integration",
+    "AI Workflow & Automation",
     "Website Redesign",
+    "New Website Development",
     "Next.js Development", 
     "WordPress Development",
     "Maintenance & Support",
-    "Branding",
-    "Graphic Design",
-    "Mobile App"
+    "Branding"
   ];
 
   const handleChange = (e) => {
