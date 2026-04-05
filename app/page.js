@@ -1,7 +1,8 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
-import Pricing from '@/components/Pricing'
+import Skills from '@/components/Skills'
+
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
 import Projects from '@/components/Projects'
@@ -34,7 +35,8 @@ export default function Home() {
       </div>
 
       <Services />
-      <Pricing />
+      <Skills />
+      
       <Experience />
       <Education />
       <Projects />

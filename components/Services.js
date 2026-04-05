@@ -80,9 +80,9 @@ export default function Services() {
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg>
             </div>
-            <h3 className="service-title">Vibe Coding</h3>
+            <h3 className="service-title">Rapid Prototyping</h3>
             <p className="service-card-desc" style={{ fontSize: '14px', opacity: 0.8, marginBottom: '20px' }}>
-              Rapid, creative builds — from idea to live website fast.
+              From idea to live website — fast, focused & built to scale.
             </p>
           </div>
         </div>

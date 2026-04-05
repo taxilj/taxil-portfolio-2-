@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="footer-row">
         <div className="footer-left">
           <div className="footer-tagline" style={{ marginBottom: '12px', fontSize: '13px', fontWeight: '600', color: 'var(--black)', opacity: 0.8 }}>
-            Available for freelance projects worldwide 🌍
+            Open to full-time roles & freelance projects worldwide 🌍
           </div>
           <div className="footer-socials">
             <a href="https://github.com/taxilj" target="_blank" rel="noopener noreferrer">GitHub</a>

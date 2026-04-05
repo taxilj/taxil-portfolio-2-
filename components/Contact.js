@@ -1,7 +1,9 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
+  const formRef = useRef()
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -9,6 +11,7 @@ export default function Contact() {
   });
 
   const [selectedServices, setSelectedServices] = useState([]);
+  const [isSending, setIsSending] = useState(false);
 
   // Fixed list — NEVER modify this array
   const services = [
@@ -34,18 +37,34 @@ export default function Contact() {
     );
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const submissionData = {
-      ...form,
+    setIsSending(true);
+    
+    const templateParams = {
+      from_name: form.name,
+      from_email: form.email,
+      company: form.company,
       services: selectedServices.join(", ")
     };
-    console.log('Form submitted:', submissionData);
-    
-    // Reset form after submission
-    setForm({ name: '', email: '', company: '' });
-    setSelectedServices([]);
-    alert("Message sent successfully!");
+
+    try {
+      await emailjs.send(
+        'service_2fh53td',
+        'template_bphwfjg',
+        templateParams,
+        'UZ_5vj7TcOTxs9UVf'
+      );
+      
+      setForm({ name: '', email: '', company: '' });
+      setSelectedServices([]);
+      alert("Message sent successfully!");
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSending(false);
+    }
   }
 
   return (
@@ -63,7 +82,7 @@ export default function Contact() {
         <p className="contact-subtitle">Have a project in mind? Let&apos;s discuss and bring it to life.</p>
       </div>
 
-      <form className="contact-form reveal-up" data-reveal="" data-delay="200" onSubmit={handleSubmit} aria-label="Contact form">
+      <form ref={formRef} className="contact-form reveal-up" data-reveal="" data-delay="200" onSubmit={handleSubmit} aria-label="Contact form">
         <div className="form-row">
           <div className="form-group">
             <label className="form-label">Name.*</label>
@@ -122,7 +141,9 @@ export default function Contact() {
         </div>
 
         <div className="form-bottom">
-          <button type="submit" className="btn-send">Send Me</button>
+          <button type="submit" className="btn-send" disabled={isSending}>
+          {isSending ? 'Sending...' : 'Send Me'}
+        </button>
           <svg className="send-squiggle" width="30" height="30" viewBox="0 0 30 30" fill="none">
             <path d="M5 25C10 15 15 20 15 10C15 5 20 2 25 5" stroke="black" strokeWidth="2" strokeLinecap="round" />
             <path d="M22 2l4 3-5 1" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

@@ -21,7 +21,7 @@ export default function Stats() {
     { value: '10+', label: 'Projects Completed' },
     { value: '15+', label: 'Satisfied Clients' },
     { value: '2+', label: 'Years Experience' },
-    { value: '86%', label: 'Success Rate' },
+    { value: '100%', label: 'Client Satisfaction' },
   ]
 
   return (

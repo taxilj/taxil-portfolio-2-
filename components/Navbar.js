@@ -23,6 +23,14 @@ export default function Navbar() {
 
       <ul className={`nav-links ${open ? 'open' : ''}`}>
         <li>
+          <a href="#skills" onClick={() => setOpen(false)}>
+            <div className="nav-link-top">
+              My Skills <span className="arrow">↗</span>
+            </div>
+            <div className="nav-link-sub">Tech stack & tools</div>
+          </a>
+        </li>
+        <li>
           <a href="#experience" onClick={() => setOpen(false)}>
             <div className="nav-link-top">
               Experience <span className="arrow">↗</span>
