@@ -50,7 +50,7 @@ export default function Hero() {
           <a href="#contact" className="btn-primary">
             Let&apos;s Talk
           </a>
-          <a href="/resume.pdf" download className="btn-download">
+          <a href="/Taxil-Resume.pdf" download className="btn-download">
             Download CV ↓
           </a>
         </div>
