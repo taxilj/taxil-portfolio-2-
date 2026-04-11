@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['madhu-portfolio-sigma.vercel.app'],
+    domains: ['madhu-portfolio-sigma.vercel.app', 'placehold.co'],
     unoptimized: true,
   },
 }

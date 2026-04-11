@@ -1,5 +1,12 @@
 const projects = [
   {
+    title: 'Wedding Bio-Data Websites',
+    tag: 'Next.js',
+    description: 'Personalized wedding portfolio sites — for couples with fixed dates & for those still searching',
+    image: 'https://placehold.co/1200x750/f5f5f5/1a1a1a?text=Wedding+Bio-Data',
+    inProgress: true,
+  },
+  {
     title: 'RedSky Placement Website',
     tag: 'Next.js',
     description: 'Modern UI with improved structure and clarity',
@@ -94,9 +101,13 @@ export default function Projects() {
                   ))}
                 </div>
               )}
-              <a href={p.link} target="_blank" rel="noopener noreferrer" className="cs-link">
-                View Project ↗
-              </a>
+              {p.inProgress ? (
+                <span className="cs-in-progress-badge">🚧 In Progress</span>
+              ) : (
+                <a href={p.link} target="_blank" rel="noopener noreferrer" className="cs-link">
+                  View Project ↗
+                </a>
+              )}
             </div>
           </div>
         ))}
