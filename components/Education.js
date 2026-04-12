@@ -4,7 +4,7 @@ export default function Education() {
       number: '1',
       role: 'MCA — Master of Computer Application',
       company: 'Ganpat University — Gujarat, India',
-      duration: '2024 - Pursuing',
+      duration: '2024 - 2026 - Pursuing',
     },
     {
       number: '2',

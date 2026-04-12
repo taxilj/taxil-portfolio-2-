@@ -4,13 +4,13 @@ export default function Experience() {
       number: '1',
       role: 'Freelance Web Developer',
       company: 'Agentryx — Remote',
-      duration: '2024 - Present',
+      duration: '2026 - Present',
     },
     {
       number: '2',
       role: 'Freelance Developer & Designer',
       company: 'Qalam Web Studio — Remote',
-      duration: '2024 - Present',
+      duration: '2025 - Present',
     },
     {
       number: '3',
